@@ -33,7 +33,7 @@ $filesystem = new Filesystem($adapter);
 ```
 
 ## Symfony 4.3 Integration
-**service.yaml**
+**services.yaml**
 ```yaml
 services:
 

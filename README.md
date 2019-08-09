@@ -33,7 +33,41 @@ $filesystem = new Filesystem($adapter);
 ```
 
 ## Symfony 4.3 Integration
+**service.yaml**
+```yaml
+services:
 
+  openstack.selectel.client:
+    class: ArtPetrov\Selectel\CloudStorage\Api\ApiClient
+    arguments: ['%env(SELECTEL_USERNAME)%','%env(SELECTEL_PASSWORD)%','%env(SELECTEL_AUTH_PATH)%']
+
+  ArtPetrov\Selectel\CloudStorage\CloudStorage:
+    arguments: ['@openstack.selectel.client']
+
+  openstack.selectel.storage_container:
+    class: ArtPetrov\Selectel\CloudStorage\CloudStorage
+    factory: ['@ArtPetrov\Selectel\CloudStorage\CloudStorage','getContainer']
+    arguments: ['%env(SELECTEL_CONTAINER_NAME)%']
+
+  ArtPetrov\Flysystem\Selectel\SelectelAdapter:
+    arguments:
+      $container: '@openstack.selectel.storage_container'
+
+```
+**packages/oneup_flysystem.yaml**
+```yaml
+oneup_flysystem:
+  adapters:
+    public_uploads_adapter:
+      custom:
+        service: ArtPetrov\Flysystem\Selectel\SelectelAdapter
+
+  filesystems:
+    public_uploads_filesystem:
+      adapter: public_uploads_adapter
+
+
+```
 
 
 ## Laravel Integration

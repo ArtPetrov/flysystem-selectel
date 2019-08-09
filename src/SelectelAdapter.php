@@ -5,10 +5,10 @@ namespace ArtPetrov\Flysystem\Selectel;
 use League\Flysystem\Config;
 use League\Flysystem\AdapterInterface;
 use League\Flysystem\Adapter\Polyfill\NotSupportingVisibilityTrait;
-use ArgentCrusade\Selectel\CloudStorage\Contracts\ContainerContract;
-use ArgentCrusade\Selectel\CloudStorage\Exceptions\FileNotFoundException;
-use ArgentCrusade\Selectel\CloudStorage\Exceptions\UploadFailedException;
-use ArgentCrusade\Selectel\CloudStorage\Exceptions\ApiRequestFailedException;
+use ArtPetrov\Selectel\CloudStorage\Contracts\ContainerContract;
+use ArtPetrov\Selectel\CloudStorage\Exceptions\FileNotFoundException;
+use ArtPetrov\Selectel\CloudStorage\Exceptions\UploadFailedException;
+use ArtPetrov\Selectel\CloudStorage\Exceptions\ApiRequestFailedException;
 
 class SelectelAdapter implements AdapterInterface
 {
@@ -17,14 +17,14 @@ class SelectelAdapter implements AdapterInterface
     /**
      * Storage container.
      *
-     * @var \ArgentCrusade\Selectel\CloudStorage\Contracts\ContainerContract
+     * @var \ArtPetrov\Selectel\CloudStorage\Contracts\ContainerContract
      */
     protected $container;
 
     /**
      * Create new instance.
      *
-     * @param \ArgentCrusade\Selectel\CloudStorage\Contracts\ContainerContract $container
+     * @param \ArtPetrov\Selectel\CloudStorage\Contracts\ContainerContract $container
      */
     public function __construct(ContainerContract $container)
     {
@@ -36,7 +36,7 @@ class SelectelAdapter implements AdapterInterface
      *
      * @param string $path Path to file.
      *
-     * @return \ArgentCrusade\Selectel\CloudStorage\Contracts\FileContract
+     * @return \ArtPetrov\Selectel\CloudStorage\Contracts\FileContract
      */
     protected function getFile($path)
     {

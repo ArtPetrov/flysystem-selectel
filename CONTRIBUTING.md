@@ -2,7 +2,7 @@
 
 Contributions are **welcome** and will be fully **credited**.
 
-We accept contributions via Pull Requests on [Github](https://github.com/ArgentCrusade/flysystem-selectel).
+We accept contributions via Pull Requests on [Github](https://github.com/ArtPetrov/flysystem-selectel).
 
 
 ## Pull Requests

@@ -1,12 +1,12 @@
 <?php
 
-namespace ArgentCrusade\Flysystem\Selectel;
+namespace ArtPetrov\Flysystem\Selectel;
 
 use League\Flysystem\Filesystem;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\ServiceProvider;
-use ArgentCrusade\Selectel\CloudStorage\CloudStorage;
-use ArgentCrusade\Selectel\CloudStorage\Api\ApiClient;
+use ArtPetrov\Selectel\CloudStorage\CloudStorage;
+use ArtPetrov\Selectel\CloudStorage\Api\ApiClient;
 
 class SelectelServiceProvider extends ServiceProvider
 {

@@ -45,10 +45,10 @@ First release.
 ## [0.9.0] - 2017-03-11
 Initial release.
 
-[Unreleased]: https://github.com/ArgentCrusade/flysystem-selectel/compare/1.2.0...HEAD
-[1.2.0]: https://github.com/ArgentCrusade/flysystem-selectel/compare/1.1.2...1.2.0
-[1.1.2]: https://github.com/ArgentCrusade/flysystem-selectel/compare/1.1.1...1.1.2
-[1.1.1]: https://github.com/ArgentCrusade/flysystem-selectel/compare/1.1.0...1.1.1
-[1.1.0]: https://github.com/ArgentCrusade/flysystem-selectel/compare/1.0.1...1.1.0
-[1.0.1]: https://github.com/ArgentCrusade/flysystem-selectel/compare/1.0.0...1.0.1
-[1.0.0]: https://github.com/ArgentCrusade/flysystem-selectel/compare/0.9.0...1.0.0
+[Unreleased]: https://github.com/ArtPetrov/flysystem-selectel/compare/1.2.0...HEAD
+[1.2.0]: https://github.com/ArtPetrov/flysystem-selectel/compare/1.1.2...1.2.0
+[1.1.2]: https://github.com/ArtPetrov/flysystem-selectel/compare/1.1.1...1.1.2
+[1.1.1]: https://github.com/ArtPetrov/flysystem-selectel/compare/1.1.0...1.1.1
+[1.1.0]: https://github.com/ArtPetrov/flysystem-selectel/compare/1.0.1...1.1.0
+[1.0.1]: https://github.com/ArtPetrov/flysystem-selectel/compare/1.0.0...1.0.1
+[1.0.0]: https://github.com/ArtPetrov/flysystem-selectel/compare/0.9.0...1.0.0

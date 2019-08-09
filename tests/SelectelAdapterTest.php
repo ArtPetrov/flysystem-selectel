@@ -1,12 +1,13 @@
 <?php
 
-use ArgentCrusade\Flysystem\Selectel\SelectelAdapter;
-use ArgentCrusade\Selectel\CloudStorage\Collections\Collection;
+use ArtPetrov\Flysystem\Selectel\SelectelAdapter;
+use ArtPetrov\Selectel\CloudStorage\Collections\Collection;
 use League\Flysystem\Config;
+use PHPUnit\Framework\TestCase;
 
-class SelectelAdapterTest extends PHPUnit_Framework_TestCase
+class SelectelAdapterTest extends TestCase
 {
-    public function tearDown()
+    protected function setUp(): void
     {
         Mockery::close();
     }
@@ -22,11 +23,11 @@ class SelectelAdapterTest extends PHPUnit_Framework_TestCase
             ],
         ]);
 
-        $files = Mockery::mock('ArgentCrusade\Selectel\CloudStorage\FluentFilesLoader');
+        $files = Mockery::mock('ArtPetrov\Selectel\CloudStorage\FluentFilesLoader');
         $files->shouldReceive('withPrefix')->andReturn($files);
         $files->shouldReceive('get')->andReturn($collection);
 
-        $mock = Mockery::mock('ArgentCrusade\Selectel\CloudStorage\Container');
+        $mock = Mockery::mock('ArtPetrov\Selectel\CloudStorage\Container');
         $mock->shouldReceive('type')->andReturn('public');
         $mock->shouldReceive('files')->andReturn($files);
 
@@ -46,11 +47,11 @@ class SelectelAdapterTest extends PHPUnit_Framework_TestCase
             ],
         ]);
 
-        $files = Mockery::mock('ArgentCrusade\Selectel\CloudStorage\FluentFilesLoader');
+        $files = Mockery::mock('ArtPetrov\Selectel\CloudStorage\FluentFilesLoader');
         $files->shouldReceive('withPrefix')->andReturn($files);
         $files->shouldReceive('get')->andReturn($collection);
 
-        $mock = Mockery::mock('ArgentCrusade\Selectel\CloudStorage\Container');
+        $mock = Mockery::mock('ArtPetrov\Selectel\CloudStorage\Container');
         $mock->shouldReceive('type')->andReturn('public');
         $mock->shouldReceive('files')->andReturn($files);
 
@@ -169,7 +170,7 @@ class SelectelAdapterTest extends PHPUnit_Framework_TestCase
      */
     public function testRead($adapter, $mock, $files)
     {
-        $file = Mockery::mock('ArgentCrusade\Selectel\CloudStorage\File');
+        $file = Mockery::mock('ArtPetrov\Selectel\CloudStorage\File');
         $file->shouldReceive('read')->andReturn('something');
         $files->shouldReceive('find')->andReturn($file);
 
@@ -186,7 +187,7 @@ class SelectelAdapterTest extends PHPUnit_Framework_TestCase
         $stream = tmpfile();
         fwrite($stream, 'something');
 
-        $file = Mockery::mock('ArgentCrusade\Selectel\CloudStorage\File');
+        $file = Mockery::mock('ArtPetrov\Selectel\CloudStorage\File');
         $file->shouldReceive('readStream')->andReturn($stream);
         $files->shouldReceive('find')->andReturn($file);
 
@@ -203,7 +204,7 @@ class SelectelAdapterTest extends PHPUnit_Framework_TestCase
      */
     public function testRename($adapter, $mock, $files)
     {
-        $file = Mockery::mock('ArgentCrusade\Selectel\CloudStorage\File');
+        $file = Mockery::mock('ArtPetrov\Selectel\CloudStorage\File');
         $file->shouldReceive('rename')->andReturn('newpath');
         $files->shouldReceive('find')->andReturn($file);
 
@@ -215,7 +216,7 @@ class SelectelAdapterTest extends PHPUnit_Framework_TestCase
      */
     public function testCopy($adapter, $mock, $files)
     {
-        $file = Mockery::mock('ArgentCrusade\Selectel\CloudStorage\File');
+        $file = Mockery::mock('ArtPetrov\Selectel\CloudStorage\File');
         $file->shouldReceive('copy')->andReturn('newpath');
         $files->shouldReceive('find')->andReturn($file);
 
@@ -238,7 +239,7 @@ class SelectelAdapterTest extends PHPUnit_Framework_TestCase
      */
     public function testDelete($adapter, $mock, $files)
     {
-        $file = Mockery::mock('ArgentCrusade\Selectel\CloudStorage\File');
+        $file = Mockery::mock('ArtPetrov\Selectel\CloudStorage\File');
         $file->shouldReceive('delete')->andReturn(true);
         $files->shouldReceive('find')->andReturn($file);
 

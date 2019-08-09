@@ -7,14 +7,14 @@
 [![Software License][ico-license]](LICENSE.md)
 
 ## Requirements
-This package requires PHP 5.6 or higher.
+This package requires PHP 7.3.
 
 ## Installation
 
 You can install the package via composer:
 
 ``` bash
-$ composer require argentcrusade/flysystem-selectel
+$ composer require artPetrov/flysystem-selectel
 ```
 
 ## Upgrade
@@ -25,9 +25,9 @@ New setting `container_url` was added. You can set your container's custom domai
 ## Usage
 
 ``` php
-use ArgentCrusade\Flysystem\Selectel\SelectelAdapter;
-use ArgentCrusade\Selectel\CloudStorage\Api\ApiClient;
-use ArgentCrusade\Selectel\CloudStorage\CloudStorage;
+use ArtPetrov\Flysystem\Selectel\SelectelAdapter;
+use ArtPetrov\Selectel\CloudStorage\Api\ApiClient;
+use ArtPetrov\Selectel\CloudStorage\CloudStorage;
 use League\Flysystem\Filesystem;
 
 $api = new ApiClient('selectel-username', 'selectel-password');
@@ -45,13 +45,13 @@ You can use this adapter with Laravel's [Storage System](https://laravel.com/doc
 If you're running Laravel 5.5+ this package will auto-added to your providers list via auto-discovery feature (requires version 1.2+ of this package).
 
 ### Laravel <= 5.4
-Add `ArgentCrusade\Flysystem\Selectel\SelectelServiceProvider::class` to your providers list in `config/app.php`
+Add `ArtPetrov\Flysystem\Selectel\SelectelServiceProvider::class` to your providers list in `config/app.php`
 
 ```php
 /*
  * Package Service Providers...
  */
-ArgentCrusade\Flysystem\Selectel\SelectelServiceProvider::class,
+ArtPetrov\Flysystem\Selectel\SelectelServiceProvider::class,
 ```
 
 ### All Laravel versions
@@ -118,14 +118,9 @@ If you discover any security related issues, please email zurbaev@gmail.com inst
 ## License
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://poser.pugx.org/argentcrusade/flysystem-selectel/version?format=flat
-[ico-license]: https://poser.pugx.org/argentcrusade/flysystem-selectel/license?format=flat
-[ico-travis]: https://api.travis-ci.org/ArgentCrusade/flysystem-selectel.svg?branch=master
-[ico-styleci]: https://styleci.io/repos/84637792/shield?branch=master&style=flat
-[ico-scrutinizer]: https://scrutinizer-ci.com/g/ArgentCrusade/flysystem-selectel/badges/quality-score.png?b=master
+[ico-version]: https://poser.pugx.org/ArtPetrov/flysystem-selectel/version?format=flat
+[ico-license]: https://poser.pugx.org/ArtPetrov/flysystem-selectel/license?format=flat
+[ico-travis]: https://api.travis-ci.org/ArtPetrov/flysystem-selectel.svg?branch=master
 
-[link-packagist]: https://packagist.org/packages/argentcrusade/flysystem-selectel
-[link-travis]: https://travis-ci.org/ArgentCrusade/flysystem-selectel
-[link-styleci]: https://styleci.io/repos/84637792
-[link-scrutinizer]: https://scrutinizer-ci.com/g/ArgentCrusade/flysystem-selectel/
+[link-packagist]: https://packagist.org/packages/ArtPetrov/flysystem-selectel
 [link-author]: https://github.com/tzurbaev

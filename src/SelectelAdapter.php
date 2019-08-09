@@ -1,6 +1,6 @@
 <?php
 
-namespace ArgentCrusade\Flysystem\Selectel;
+namespace ArtPetrov\Flysystem\Selectel;
 
 use League\Flysystem\Config;
 use League\Flysystem\AdapterInterface;

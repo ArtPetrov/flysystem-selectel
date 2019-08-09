@@ -1,11 +1,5 @@
 # Flysystem Adapter for Selectel Cloud Storage
 
-[![Build Status][ico-travis]][link-travis]
-[![StyleCI][ico-styleci]][link-styleci]
-[![ScrutinizerCI][ico-scrutinizer]][link-scrutinizer]
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
-
 ## Requirements
 This package requires PHP 7.3.
 
@@ -116,15 +110,6 @@ $ vendor/bin/phpunit
 ## Contributing
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
-## Security
-If you discover any security related issues, please email zurbaev@gmail.com instead of using the issue tracker.
-
 ## License
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://poser.pugx.org/ArtPetrov/flysystem-selectel/version?format=flat
-[ico-license]: https://poser.pugx.org/ArtPetrov/flysystem-selectel/license?format=flat
-[ico-travis]: https://api.travis-ci.org/ArtPetrov/flysystem-selectel.svg?branch=master
-
-[link-packagist]: https://packagist.org/packages/ArtPetrov/flysystem-selectel
-[link-author]: https://github.com/tzurbaev

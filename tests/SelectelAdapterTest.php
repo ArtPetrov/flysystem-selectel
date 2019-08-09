@@ -117,7 +117,7 @@ class SelectelAdapterTest extends TestCase
         $mock->shouldReceive('uploadFromString')->andReturn(md5('test'));
 
         $result = $adapter->write('something', 'contents', new Config());
-        $this->assertInternalType('array', $result);
+        $this->assertIsArray( $result);
         $this->assertArrayHasKey('type', $result);
         $this->assertEquals('file', $result['type']);
     }
@@ -130,7 +130,7 @@ class SelectelAdapterTest extends TestCase
         $mock->shouldReceive('uploadFromString')->andReturn(md5('test'));
 
         $result = $adapter->update('something', 'contents', new Config());
-        $this->assertInternalType('array', $result);
+        $this->assertIsArray($result);
         $this->assertArrayHasKey('type', $result);
         $this->assertEquals('file', $result['type']);
     }
@@ -144,7 +144,7 @@ class SelectelAdapterTest extends TestCase
 
         $file = tmpfile();
         $result = $adapter->writeStream('something', $file, new Config());
-        $this->assertInternalType('array', $result);
+        $this->assertIsArray($result);
         $this->assertArrayHasKey('type', $result);
         $this->assertEquals('file', $result['type']);
         fclose($file);
@@ -159,7 +159,7 @@ class SelectelAdapterTest extends TestCase
 
         $file = tmpfile();
         $result = $adapter->updateStream('something', $file, new Config());
-        $this->assertInternalType('array', $result);
+        $this->assertIsArray($result);
         $this->assertArrayHasKey('type', $result);
         $this->assertEquals('file', $result['type']);
         fclose($file);
@@ -175,7 +175,7 @@ class SelectelAdapterTest extends TestCase
         $files->shouldReceive('find')->andReturn($file);
 
         $result = $adapter->read('something');
-        $this->assertInternalType('array', $result);
+        $this->assertIsArray($result);
         $this->assertArrayHasKey('contents', $result);
     }
 
@@ -192,7 +192,7 @@ class SelectelAdapterTest extends TestCase
         $files->shouldReceive('find')->andReturn($file);
 
         $result = $adapter->readStream('something');
-        $this->assertInternalType('array', $result);
+        $this->assertIsArray($result);
         $this->assertArrayHasKey('stream', $result);
         $this->assertEquals('something', fread($result['stream'], 1024));
 
@@ -231,7 +231,7 @@ class SelectelAdapterTest extends TestCase
         $mock->shouldReceive('createDir')->andReturn(md5('test'));
         $result = $adapter->createDir('something', new Config());
 
-        $this->assertInternalType('array', $result);
+        $this->assertIsArray($result);
     }
 
     /**
